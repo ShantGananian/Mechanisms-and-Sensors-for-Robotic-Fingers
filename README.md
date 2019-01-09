@@ -1,8 +1,8 @@
 # Mechanisms and Sensors for Robotic Fingers
 ## Seminar: Humanoide Roboter WS 2018/2019
-#### Institute for Anthropomatics and Robotics
-#### Karlsruhe Institute of Technology
-#### http://www.humanoids.kit.edu
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Institute for Anthropomatics and Robotics
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Karlsruhe Institute of Technology
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://www.humanoids.kit.edu
 
  ## Description
  Literature research regarding (anthropomorphic) robotic fingers
