@@ -12,11 +12,11 @@
  
  ## Table of contents
 * [Introduction](#introduction)
-* [Robotic Fingers](#robotik-fingers)
-* [Requirements for Artificial Fingers](#requirements-for-artificial-fingers)
-* [Actuators](#actuators)
-* [Sensors](#sensors)
-* [References](#references)
+* [To-do list](#to-do-list)
+* [Status](#status)
+
+## Introduction
+Grasping is achieved in robots by suitable finger mechanisms inspired from structures in nature. This paper discusses anthropomorphic hands, its composing parts and mechanisms, used actuators and sensors, their characteristics and operation.
 
 ## To-do list:
 * Adding details of several chosen robotic hands' fingers mechanisms, used actuators and sensors.
