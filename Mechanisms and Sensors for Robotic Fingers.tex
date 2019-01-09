@@ -1,0 +1,141 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%        
+%
+%\documentclass[letterpaper, 10 pt, conference]{ieeeconf}  % Comment this line out if you need a4paper
+%
+\documentclass[a4paper, 10pt, conference]{ieeeconf}      % Use this line for a4 paper
+%
+%\IEEEoverridecommandlockouts                              % This command is only needed if 
+                                                          % you want to use the \thanks command
+%
+\overrideIEEEmargins                                      % Needed to meet printer requirements.
+%
+% See the \addtolength command later in the file to balance the column lengths
+% on the last page of the document
+%
+\usepackage{graphicx} % for pdf, bitmapped graphics files
+%\usepackage{hyperref}
+%\hypersetup{colorlinks,urlcolor=blue,linkcolor=blue}
+%
+\usepackage{epstopdf}
+%\usepackage{mathptmx} % assumes new font selection scheme installed
+%\usepackage{times} % assumes new font selection scheme installed
+\usepackage{amsmath} % assumes amsmath package installed
+\usepackage{amssymb}  % assumes amsmath package installed
+
+\usepackage{graphicx}
+%\usepackage{subfig}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{array}
+\usepackage[space]{cite}
+
+%\usepackage[hidelinks]{hyperref}
+\usepackage[colorlinks, linkcolor = black, citecolor = black, filecolor = black, urlcolor = blue]{hyperref}
+
+
+\usepackage{tikz}
+
+\newcommand\encircle[1]{%
+	\tikz[baseline=(X.base)] 
+	\node (X) [draw, shape=circle, inner sep=0.5pt] {#1};}
+
+
+
+
+
+%\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+%\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\sgn}{sgn}
+\newcommand{\specialcell}[2][c]{%
+	\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+
+\renewcommand{\citedash}{--}
+
+
+\newcommand{\etal}{~\textit{et al.}}
+%
+\title{\bf {\LARGE Mechanisms and Sensors for Robotic Fingers} \\
+{\normalsize H$^2$T-Seminar: Humanoid Robotics, WS 18/19}}
+\author{Shant Gananian, Pascal Weiner and Tamim Asfour \\ High Performance Humanoid Technologies \\ Institute for Anthropomatics and Robotics \\ Karlsruhe Institute of Technology \\
+\url{http://www.humanoids.kit.edu}}
+
+
+%
+%
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+: Grasping is achieved in robots by suitable finger mechanisms inspired from structures in nature. This paper discusses anthropomorphic fingers, their actuators and sensors, their characteristics and operation of their mechanisms.
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\textbf{Introduction}}
+The first robotic hand, as it is commonly referred to, was perhaps the end-effector of the Handyman, a robot developed by Ralph Mosher for General Electric in 1960. Around 1969, the first research projects on robotic hands with three fingers including a “thumb” in opposition—hence an anthropomorphic design—began in the United States and in Japan.\\
+The idea of copying the human hand is so old and may be contemporary of the first automata in the 18th century, e.g., La Musicienne of the inventor Jacquet-Droz (Rosheim 1994). This automate was able to play a wide variety of organ partitions with two five-finger hands actuated with steel cables connected to a programming cam shaft.\\
+For a prosthetic hand the focus is much more on aesthetics, weight and broad range of functionality, while the supply of power is limited, so self-locking mechanisms are preferred. Today’s prosthetic hands have integrated drive technologies and weigh less than 500 g.\\
+Because of the dexterity of the human hand, most recent humanoid robots research projects addressed in their designs the anthropomorphism of the robotic hand. Many research laboratories around the world have developed prototypes of such hands as early as in the mid 1980’s when the foundations of these studies were laid (Mason and Salisbury 1985), by taking the human hand as a model for the robotic manipulation, in terms of performance and versatility. But results thus far are not comparable with the performances of the human hand.\\
+Anthropomorphism is the capability of a robotic end-effector to mimic the human hand.\\
+Dexterity is the ability to autonomously perform highly precise operations with a certain level of complexity (visual/perceptual/tactile feedback).  The dexterity domain can be divided in two main areas, grasping (grasped object is fixed with respect to the hand workspace) and internal manipulation (controlled motion of the grasped object inside the hand workspace).\\
+The dexterity of robots has always been clearly more limited than that of a well-trained human being.\\
+In fact we can find anthropomorphic end-effectors with very poor dexterity level, even if they are called hands, they perform very rough grasping procedures. Similarly, we can find smart end-effectors, capable of sophisticated manipulation procedures, but without any level of anthropomorphism.\\
+Anthropomorphism is not necessary for achieving dexterity, and nor sufficient. But still it is desirable goal in the design of robotic end-effectors in operating in an environment where tasks may be executed by a robot or by a man, or in tele-operation of the end-effector by a man, or when it is required that the robot has human-like aspects and behavior.\\
+Considering that the human hand is capable of prehension (grasping objects of different size and shape) and apprehension (understanding through active touch), then it is both an output and input device. It can apply forces and provide information about the state of the interaction with the object. These characteristics are desirable in advanced robot hands.\\
+The average human hand is around 0.58\% of total body weight (approximately 400g).\\
+Human hands have a highly articulated thumb. Amputation of the thumb is cited to cause 40\% loss of hand function and around 20\% disability of the whole person. The main motions of the thumb are flexion, extension, abduction/adduction and opposition. The thumb facilitates the grasping tasks by means of these motions.\\
+
+\section{\textbf{Robotic Fingers}}
+Fingers of the hand are organs of manipulation and sensation. They move in the following ways: flexion, extension, abduction and adduction.\\
+The number of joints per finger in anthropomorphic robotic hands is extremely important since it provides the hand with conformance to shapes and acts as a contact surface for gripping and support structure for grasps.\\
+Number of fingers in anthropomorphic robotic hands can differ, but increased number of fingers provide a larger grasping surface and increases conformity to shapes.\\
+The anatomy of fingers in nature shows us the following design characteristics:\\
+\begin{itemize}
+	\item A serial bone-link structure mainly for rigidity and load capability.
+	\item An actuation muscle system aiming to rotate each bone-link independently but with coordinate movements with other finger links.\\
+\end{itemize}
+
+\section{\textbf{Requirements for Artificial Fingers}}
+In general common requirements can be identified mainly in the aspects for:\\
+\begin{enumerate}
+  \item Motion properties in:
+  	\begin{itemize}
+  		\item Grasping configurations
+  		\item Smooth approaching motion
+		\item Adaptable motion configuration to object shapes
+		\item Reconfigurable grasping configurations
+		\item Workspace ranges
+		\item Limited motion impacts again objects to be grasped
+	\end{itemize}
+  \item Force capability in:
+  	\begin{itemize}
+  		\item Stable grasping configurations
+		\item Efficient transmission of input power to grasping forces
+		\item Distribution of grasping forces among several contacts with grasped object
+		\item Positions of application points of the grasping forces
+		\item Adjustable grasping forces
+  	\end{itemize}
+  \item Mechanical design in:
+  	\begin{itemize}
+  		\item Stiff or compliant structure at grasp
+		\item Phalanx shape for adaptability to object shape
+		\item Room for sensors
+		\item Compact design versus human-like solutions
+		\item Lightweight solution with smart or traditional materials
+		\item Low-friction joints
+		\item Location of power source
+  	\end{itemize}
+\end{enumerate}
+	
+\bibliographystyle{./IEEEtran}
+\nocite{*}
+\bibliography{./References}
+%
+\end{document}
+%
