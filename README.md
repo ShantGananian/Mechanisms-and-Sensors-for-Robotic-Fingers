@@ -3,17 +3,18 @@
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Institute for Anthropomatics and Robotics
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Karlsruhe Institute of Technology
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://www.humanoids.kit.edu
+ 
+ ## Table of contents
+* [Description](#description)
+* [Introduction](#introduction)
+* [To-do list](#to-do-list)
+* [Status](#status)
 
- ## Description
+## Description
  Literature research regarding (anthropomorphic) robotic fingers
  * What kind of actuation mechanism is used?
  * Are sensors integrated? How are they integrated?
  * Are there noticeable trends in robotic finger design?
- 
- ## Table of contents
-* [Introduction](#introduction)
-* [To-do list](#to-do-list)
-* [Status](#status)
 
 ## Introduction
 Grasping is achieved in robots by suitable finger mechanisms inspired from structures in nature. This paper discusses anthropomorphic hands, its composing parts and mechanisms, used actuators and sensors, their characteristics and operation.
