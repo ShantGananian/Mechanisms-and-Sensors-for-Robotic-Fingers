@@ -66,40 +66,34 @@
 %
 \begin{document}
 \maketitle
-\thispagestyle{empty}
-\pagestyle{empty}
+\thispagestyle{plain}
+\pagestyle{plain}
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-: Grasping is achieved in robots by suitable finger mechanisms inspired from structures in nature. This paper discusses anthropomorphic fingers, their actuators and sensors, their characteristics and operation of their mechanisms.
+: In the past years robotics has matured from being mostly used in the industry and made a break into our daily lives. Similarly, the research focus for grasping and manipulation has evolved from manipulators and grippers to dexterous anthropomorphic hands, capable of performing different tasks in unstructured environment.
+The fingers of these hands play a crucial role in their success and performance. Designing these fingers opens researchers to many considerations to choose the best suitable specifications for the fingers, some of which will be discussed in this paper.
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\textbf{Introduction}}
-The first robotic hand, as it is commonly referred to, was perhaps the end-effector of the Handyman, a robot developed by Ralph Mosher for General Electric in 1960. Around 1969, the first research projects on robotic hands with three fingers including a “thumb” in opposition—hence an anthropomorphic design—began in the United States and in Japan.\\
-The idea of copying the human hand is so old and may be contemporary of the first automata in the 18th century, e.g., La Musicienne of the inventor Jacquet-Droz (Rosheim 1994). This automate was able to play a wide variety of organ partitions with two five-finger hands actuated with steel cables connected to a programming cam shaft.\\
-For a prosthetic hand the focus is much more on aesthetics, weight and broad range of functionality, while the supply of power is limited, so self-locking mechanisms are preferred. Today’s prosthetic hands have integrated drive technologies and weigh less than 500 g.\\
-Because of the dexterity of the human hand, most recent humanoid robots research projects addressed in their designs the anthropomorphism of the robotic hand. Many research laboratories around the world have developed prototypes of such hands as early as in the mid 1980’s when the foundations of these studies were laid (Mason and Salisbury 1985), by taking the human hand as a model for the robotic manipulation, in terms of performance and versatility. But results thus far are not comparable with the performances of the human hand.\\
-Anthropomorphism is the capability of a robotic end-effector to mimic the human hand.\\
-Dexterity is the ability to autonomously perform highly precise operations with a certain level of complexity (visual/perceptual/tactile feedback).  The dexterity domain can be divided in two main areas, grasping (grasped object is fixed with respect to the hand workspace) and internal manipulation (controlled motion of the grasped object inside the hand workspace).\\
+The idea of copying the human hand is so old and may be contemporary of the first automata in the 18th century, e.g., La Musicienne of the inventor Jacquet-Droz. This automate was able to play a wide variety of organ partitions with two five-finger hands actuated with steel cables connected to a programming cam shaft.\\
+The human hand has been an inspiration for robotic hand designers for decades. The first robotic hand, as it is commonly referred to, was perhaps the end-effector of the Handyman, a robot developed by Ralph Mosher for General Electric in 1960. Around 1969, the first research projects on robotic hands with three fingers including a “thumb” in opposition —hence an anthropomorphic design— began in the United States and in Japan.\\
+For a prosthetic hand the focus is much more on aesthetics, weight and broad range of functionality, while the supply of power is limited, so self-locking mechanisms are preferred. Today's prosthetic hands have integrated drive technologies and weigh less than 500 g; The average human hand is around 0.58\% of the total body weight (approximately 400g).\\
+Because of the dexterity of the human hand, many recent humanoid robots research projects addressed in their designs the anthropomorphism of the robotic hand. Many research laboratories around the world have developed prototypes of such hands as early as in the mid 1980’s when the foundations of these studies were laid (Mason and Salisbury 1985), by taking the human hand as a model for the robotic manipulation, in terms of performance and versatility.\\
 The dexterity of robots has always been clearly more limited than that of a well-trained human being.\\
 In fact we can find anthropomorphic end-effectors with very poor dexterity level, even if they are called hands, they perform very rough grasping procedures. Similarly, we can find smart end-effectors, capable of sophisticated manipulation procedures, but without any level of anthropomorphism.\\
-Anthropomorphism is not necessary for achieving dexterity, and nor sufficient. But still it is desirable goal in the design of robotic end-effectors in operating in an environment where tasks may be executed by a robot or by a man, or in tele-operation of the end-effector by a man, or when it is required that the robot has human-like aspects and behavior.\\
-Considering that the human hand is capable of prehension (grasping objects of different size and shape) and apprehension (understanding through active touch), then it is both an output and input device. It can apply forces and provide information about the state of the interaction with the object. These characteristics are desirable in advanced robot hands.\\
-The average human hand is around 0.58\% of total body weight (approximately 400g).\\
-Human hands have a highly articulated thumb. Amputation of the thumb is cited to cause 40\% loss of hand function and around 20\% disability of the whole person. The main motions of the thumb are flexion, extension, abduction/adduction and opposition. The thumb facilitates the grasping tasks by means of these motions.\\
+Anthropomorphism is not necessary for achieving dexterity, and nor sufficient. But still it is desirable goal in the design of robotic end-effectors in operating in an environment where tasks may be executed by a robot or by a man, or in tele-operation of the end-effector by a man, or when it is required that the robot has human-like aspects and behavior. Considering that the human hand is capable of prehension (grasping objects of different size and shape) and apprehension (understanding through active touch), then it is both an output and input device. It can apply forces and provide information about the state of the interaction with the object. These characteristics are desirable in advanced robot hands.\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\textbf{Robotic Fingers}}
 Fingers of the hand are organs of manipulation and sensation. They move in the following ways: flexion, extension, abduction and adduction.\\
-The number of joints per finger in anthropomorphic robotic hands is extremely important since it provides the hand with conformance to shapes and acts as a contact surface for gripping and support structure for grasps.\\
-Number of fingers in anthropomorphic robotic hands can differ, but increased number of fingers provide a larger grasping surface and increases conformity to shapes.\\
 The anatomy of fingers in nature shows us the following design characteristics:\\
 \begin{itemize}
 	\item A serial bone-link structure mainly for rigidity and load capability.
 	\item An actuation muscle system aiming to rotate each bone-link independently but with coordinate movements with other finger links.\\
 \end{itemize}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{\textbf{Requirements for Artificial Fingers}}
+Human hands have a highly articulated thumb. Amputation of the thumb is cited to cause 40\% loss of hand function and around 20\% disability of the whole person. The main motions of the thumb are flexion, extension, abduction/adduction and opposition. The thumb facilitates the grasping tasks by means of these motions.\\
+Designing fingers to accomplish assigned tasks is a complex procedure.\\
 In general common requirements can be identified mainly in the aspects for:\\
 \begin{enumerate}
   \item Motion properties in:
@@ -130,58 +124,147 @@ In general common requirements can be identified mainly in the aspects for:\\
 		\item Location of power source\\
   	\end{itemize}
 \end{enumerate}
-A general procedure can be outlined as in Fig.\ref{fig:design1}.
-\begin{figure}[h!]
-\centering
-  \includegraphics[width=0.7\linewidth]{./images/design}
-  \caption{A flowchart for design procedure of finger mechanisms}
-  \label{fig:design1}
-\end{figure}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{\textbf{Actuators}}
-Human hands vary greatly in their speed and grip force and are capable of reaching up to 400 N in everyday tasks. This kind of actuation characteristics is not achievable with the current motors available in the market, considering them to be situated in the hand. For that reason remote actuation is used in many cases, for example by placing actuators in the forearm and using tendons to transmit the forces to the finger joints.\\
-For developing anthropomorphic finger mechanisms researches used two different approaches: complex mechanisms for performing manipulation tasks with high dexterity, or mechanisms with a reduced number of degrees of freedoms (DoFs) and actuators.\\
-\begin{enumerate}
-  \item \textbf{Level of actuation:}
-Aside from the number of fingers and number of joints per finger, robotic hands can be distinguished by their level of actuation.\\
- 	\begin{itemize}
- 		\item fully actuated: every joint is independently controllable DoF = DoC
- 		\item under actuated: some of the joints are coupled mechanically DoF > DoC\\
- 	\end{itemize}
-Underactuated hands are preferred by designers because of the reduction of required actuators which affects the size, the weight and the complexity of the hand. This also makes the control of the system simpler.\\
-  \item \textbf{Type of actuation:}
-Actuators and transmissions used in robotic hands can be:\\
+Some of the key issues considered by developers or researchers when choosing the fingers specifications are:\\
 	\begin{itemize}
-		\item electric motors
-		\item pneumatic actuators
-		\item hydraulic actuators
-		\item shape memory alloys (SMA)\\
+		\item Number of Fingers
+		\item Shape of the fingertips
+		\item Compliant joints
+		\item Built-in or remote actuation
+		\item Transmission systems
+		\item Sensors
+		\item Materials and manufacturing\\
 	\end{itemize}
-Despite the electric motors represent the choice with smallest power density it is the most common solution adopted in the development of robotic hands. This is compensated by the flexibility and simplicity of the control, and the wide availability of the batteries.\\
-Pneumatic actuators have high power density, but low stiffness, and that makes the control complicated. The energy required has to be stored in a tank (big volumes), the system needs compressor, pressure sensors and regulator. All these components take a quite a bit of valuable space and are quite expensive.\\
-Hydraulic actuators have very high performance indices but have the same storage difficulties of pneumatic actuators, and they are hard to miniaturize because they need to work with high pressures.\\
-The shape memory alloys (SMA) are materials that have the ability to contract when heated above a certain temperature allowing muscle-like movements. They are very compact, totally silent and when contracting exhibit ample forces. Consequently, they can be successfully used for driving dexterous prosthetic hands.\\
-One major disadvantage is their response speed which is relatively slow being limited by the speed with which the SMA can be heated and cooled. Other disadvantages are the power requirements, control difficulties and the limited internal space. This technology seems to be not mature yet.\\
-  \item \textbf{Type of transmission:}
-The mechanism for transmitting the motor power to the joints could be categorized as:\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\textbf{Number of Fingers}}
+Number of fingers in anthropomorphic robotic hands can differ, but increased number of fingers provide a larger grasping surface and increases conformity to shapes.\\
+A comparison chart for robotic hands researched and developed between the years of 1979 to 2016 is presented in the Table \ref{hand-comparison}\\
+By reviewing dexterous robotic hands developed between 1983 to 2016 \cite{ramirez20173} it was visible that the five finger configuration is superior over the three or four finger setups (Fig.\ref{fig:DistributionOfFingerConfigurations}).\\
+It was assumed that this trend is due to the fact that the robots are moving to more dynamic and human populated scenarios, where unlike the industrial grippers the new applications don't measure the effectiveness only in terms of repetition and high precision. Many studies used hands with different finger configurations for different applications with positive results. One does not overcome the other, though their purposes and applications might be different.\\
+Due to their more available postures, the five finger hands can provide more flexibility and grasping postures compared to the traditional grippers, but it is also more complex.\\
+The correct hand is dependent upon the tasks to be done and the environment in which such activities take place.\\
+\begin{figure}[h!]
+\centering  \includegraphics[width=1.0\linewidth]{./images/DistributionOfFingerConfigurations}
+  \caption{Distribution of Finger Configurations}
+  \label{fig:DistributionOfFingerConfigurations}
+	\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\textbf{Shape of the fingertips}}
+Some hands have fingers with a flat fingertip, where only the flat surface is designed to interact with the object, such as the SDM hand (Fig.\ref{fig:SDMHand}) and the Barrett hand (Fig.\ref{fig:BarrettHand}).\\
+\begin{figure}[h!]
+\centering  \includegraphics[scale=0.7]{./images/SDMHand}
+  \caption{SDM Hand}
+  \label{fig:SDMHand}
+	\end{figure}
+\begin{figure}[h!]
+\centering  \includegraphics[scale=0.7]{./images/BarrettHand}
+  \caption{Barrett Hand}
+  \label{fig:BarrettHand}
+	\end{figure}
+A different approach is to shape the finger surfaces in an anthropomorphic fashion, where the fingertip is round and allows for more flexible manipulation, such as the Robonaut Hand (Fig.\ref{fig:RobonautHand}), and the Shadow Dextrous Hand (Fig.\ref{fig:ShadowDextrousHand}).\\
+\begin{figure}[h!]
+\centering  \includegraphics[scale=0.6]{./images/RobonautHand}
+  \caption{Robonaut Hand}
+  \label{fig:RobonautHand}
+	\end{figure}
+\begin{figure}[h!]
+\centering  \includegraphics[scale=0.7]{./images/ShadowDextrousHand}
+  \caption{Shadow Dextrous Hand}
+  \label{fig:ShadowDextrousHand}
+	\end{figure}
+Finally, some hands have fingers with more generic round surfaces in cylindrical and spherical shapes such as the CyberHand (Fig.\ref{fig:CyberHand}).\\
+\begin{figure}[h!]
+\centering  \includegraphics[scale=0.7]{./images/CyberHand}
+  \caption{CyberHand}
+  \label{fig:CyberHand}
+	\end{figure}
+Using flat finger pads can often increase the stability of grasps compared to a rounded geometry, but it may also prevent the fingers from being used effectively at a wide range of angles.\\
+However, there is little information on how the finger should be shaped in order to facilitate manipulation. There is a lack of studies on what finger surfaces are actually used during manipulation. This is likely due to the difficulty of effectively instrumenting the contact surfaces of the finger pads.\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\textbf{Traditional and Compliant Joints}}
+The number of joints per finger in anthropomorphic robotic hands is extremely important since it provides the hand with conformance to shapes and acts as a contact surface for gripping and support structure for grasps.\\
+There are two types of joint designs that have been widely used in robotic hands \cite{siciliano2016springer}. The first type uses standard mechanical components such as hinges, linkages, or gears and belts. Many important features have been achieved in this kind, including high degrees of modularity, built-in actuators, but it involves considerable systems-level complexity and implementation costs.\\
+An alternative approach to traditional joints is the compliant joints. These types reduce overall complexity of the robotic hand's mechanisms and hands are able to withstand large impacts without damage. In addition, the advent of new materials and new technologies (e.g. Rapid Prototyping) largely encourages the development of this concept (Fig.\ref{fig:teflon}) (Fig.\ref{fig:springs}) (Fig.\ref{fig:RapidPrototyping}).\\
+But it has also some disadvantages. The Range-of-Motion is limited. The Axis Drif; most compliant joints undergo imprecise motion as the center of rotation does not remain fixed with respect to the links it connects. And such joints can suffer Stress Concentration.\\
+\begin{figure}[h!]
+\centering  \includegraphics[scale=0.7]{./images/teflon}
+  \caption{The finger is obtained in a single teflon piece}
+  \label{fig:teflon}
+	\end{figure}
+\begin{figure}[h!]
+\centering  \includegraphics[scale=0.6]{./images/springs}
+  \caption{Joint compliance is achieved with metallic springs}
+  \label{fig:springs}
+	\end{figure}
+\begin{figure}[h!]
+\centering  \includegraphics[scale=0.6]{./images/RapidPrototyping}
+  \caption{Rapid prototyping allows for different compliant mechanisms as joints}
+  \label{fig:RapidPrototyping}
+	\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\textbf{Built-in Actuation}}
+In order to actuate the joints of a robotic finger, two basic approaches for the placement of the actuators are used \cite{belter2013mechanical}:\\
 \begin{itemize}
-		\item tendon and pulleys or sheath, like steal wires, synthetic strings, plastic strips
-		\item link transmission (rigid connection), like gears, articulated mechanism\\
+	\item Placing the motors as close as possible to each joint, directly in the fingers and sometimes integrating them within the joint itself (Fig.\ref{fig:VincentFinger}).
+	\item Placing the motors into the palm or in the forearm; in this case motion is transmitted to each joint by means of (complex) kinematic chains. (Fig.\ref{fig:MichelangeloDriveMechanism})\\
+\begin{figure}[h!]
+\centering  \includegraphics[scale=0.6]{./images/VincentFinger}
+  \caption{Vincent finger motor (Vincent Systems) is housed in proximal phalange and rotates worm against fixed worm gear to flex finger.}
+  \label{fig:VincentFinger}
+	\end{figure}
+\begin{figure}[h!]
+\centering  \includegraphics[scale=0.6]{./images/iLimbFinger}
+  \caption{iLimb finger (Touch Bionics) is actuated in same manner as Vincent finger but uses set of bevel gears between motor and worm drive. MCP = metacarpal phalange.}
+  \label{fig:iLimbFinger}
+	\end{figure}	
+	\begin{figure}[h!]
+\centering  \includegraphics[scale=0.7]{./images/MichelangeloDriveMechanism}
+  \caption{Drive mechanism of Michelangelo hand (Otto Bock). Center drive element controls flexion of all four fingers and thumb. Second motor (which actuates against bronze worm gear) independently controls abduction/adduction of thumb.}
+  \label{fig:MichelangeloDriveMechanism}
+	\end{figure}
+\end{itemize}
+This built-in actuation simplifies the mechanical configuration of the joint, reducing the transmission chain complexity. It also has the advantage that the motion of the joint is kinematically independent with respect to other joints. However, the motors occupy a large room inside the finger structure, making it harder to host other elements, like sensors or compliant skin layers.\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\textbf{Transmission}}
+Remote actuation is an alternative solution to in-site actuation. In remote actuation, the joint is driven by actuators placed outside the links connected by the joint itself. This kind of systems can be classified according to the type of adopted transmission elements:\\
+\begin{itemize}
+\item \textbf{Flexible Link Transmission}
+	\begin{itemize}
+		\item Pulley-routed flexible elements (tendons, chains, belts)
+		\item Sheath-routed flexible elements (mainly tendon-like elements)\\
 	\end{itemize}
-Using tendons to transmit the power to the joint shaft allows us to place the actuators remotely. It also allows us to reduce the number of parts required for the linkage.\\
-The classical geared coupling mechanisms add weight to the device but offer better performance in terms of friction. It is a good solution especially when we are limited with the available space and actuators have to be integrated in the palm of the hand or in the fingers.\\
-\end{enumerate}
+This kind allows the actuators to be located remotely from the joints. Consequently reducing the dimensions and weight of the fingers. But the disadvantage of the flexible cables or flat bend transmission is that they can only be used to pull. In order to achieve the active two-way control a pair is required and this increases the complexity.\\ 
+\item \textbf{Rigid Link Transmission}
+	\begin{itemize}
+		\item Parallel and nonparallel axes gear trains, like bevel gears, worm gears, and so on.\\
+	\end{itemize}
+\end{itemize}
+This kind gives the best stiffness properties to the transmission. Additionally such transmissions require less maintenance than the flexible kind and they allow bidirectional control of the joint. The disadvantage here is that using rigid transmission systems increases the weight, complexity and sometimes dimensions of the hand.\\
+Considering the transmission types used in robotic hands developed since 1983 (Fig.\ref{fig:TransmissionsTypes}) we find out that the preferred transmission type is tendons. They allow to simplify the design and to take the actuators off of the hand. However the disadvantage is that they introduce errors. The second most used type is gears, they have more accuracy but also more friction. The direct transmission type is the less used type because of the difficulty in its design.\\
+A brief comparison \cite{balasubramanian2014human} based on different parameters, between the main transmission mechanisms that can be employed in artificial hands, is shown in (Fig.\ref{fig:parameters}).\\
+\begin{figure}[h!]
+\centering  \includegraphics[width=1.0\linewidth]{./images/TransmissionsTypes}
+  \caption{Transmissions Types}
+  \label{fig:TransmissionsTypes}
+	\end{figure}
+\begin{figure}[h!]
+\centering  \includegraphics[width=1.0\linewidth]{./images/parameters}
+  \caption{Comparison between the main transmission mechanisms}
+  \label{fig:parameters}
+	\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\textbf{Sensors}}
-Sensors play a major role in anthropomorphic robotic hands. They are what robotic systems use to get useful data of its own state or the environment around it. Some of the key types of sensors are:\\
-	\begin{itemize}
-	\item \textbf{Joint / Position sensors:} They give feedback on the link and joint position in the robot’s workspace. In underactuated hands, it also provides feedback on the grasp and its conformity with the shape of the object being handled.\\
-	\item \textbf{Force / Torque sensors:} To get information on the amount of the force being applied by the hand on the environment and the forces and torques that are present within the system itself.\\
-	\item \textbf{Tactile / Touch sensors:} The functional versatility (adaptability to different situations) of the human hand comes from the integration of its exteroception (sensitivity to environmental stimuli) and proprioception (perception of the position and movement) abilities.
-Information gathered by both of these classes is what is referred to as "haptic perception".
-Touch is a complex human sense distibuted on the body and gives a whole body experience. It allows us to determine things about the objects we come in contact with, like their hardness, texture, shape, temperature, etc. But also allows us to realize the changing state of our interactions with them.\\
-Motivated by these aspects of the human touch emerged the study of artificial tactile sensing to enhance the performance of the robotic end-effectors by equipping them with tactile senors that give feedback about the magnitude and direction of forces at contact points with the objects they are interacting with.\\
+In robotics sensors can be classified in two main categories: Proprioceptive and Exteroceptive sensors.\\
+The first type of sensors measures physical information related to the state of the device itself (e.g., position, velocity, and so on), while the second one is devoted to the measurement of data related to the interaction with objects/environment (e.g., applied forces/torques, friction, shape, and so on).\\
+Tactile sensing is an essential element of autonomous dexterous robot hand manipulation. It provides information about forces of interaction and surface properties at points of contact between the robot fingers and the objects.\\
+In general, the types of information that may be obtained from a tactile sensor are:\\
+\begin{itemize}
+	\item \textbf{Contact:} This is the most simple information given by the sensor, concerning the presence or absence of a contact.
+	\item \textbf{Force:} Each sensing element provides an information related to the amount of locally applied force, which can be used in several manners for successive elaborations.
+	\item \textbf{Simple geometrical information}, i. e., position of the contact area, geometrical shape of the contact itself (planar, circular, and so on).
+	\item \textbf{Main geometrical features} of the object: By proper elaborations of the data of the taxels, it is possible to deduce the type of object in contact with the sensor, for example a sphere, a cylinder and so on (data relative to the 3-D (three-dimensional) shape).
+	\item \textbf{Mechanical properties}, such as friction coefficient, roughness, and so on. Also thermal properties of the object may be measured by a tactile sensor.
+	\item \textbf{Slip condition}, i. e., the relative movement between the object and the sensor.
+\end{itemize}
 As proposed by \cite{yousef2011tactile} the minimum functional requirements for a robotic tactile sensing system mimicking human manipulation is summarized as:\\
 		\begin{itemize}
 			\item Detect the contact and release of an object.
@@ -203,60 +286,61 @@ Most common tactil sensor configurations are:
 			\item Magnetic transduction sensors
 			\item Photoelectric, or optical, tactile sensors\\
 		\end{itemize}
-	\item \textbf{Other sensors:} temperature, olfactory, vision, depth sensing, stress, strain, twist etc.\\
-	\end{itemize}
-The skin of human body is covered with a continuous network of tactile sensors offering feedback about the amount of force applied and the region the force is applied to, within a threshold.\\
-The skin temperature can assist in identifying the object while grasping especially when there is no visual feedback (trying to grasp in the dark).\\
-Cameras could be integrated on the palm and fingers of robotic hands, therefore making it possible to have a wide view when far away and high resolution when close up, with the freedom to actively avoid occlusions.\\
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{\textbf{Worldwide evolution of robotic hands}}
-A comparison chart for robotic hands researched and developed between the years of 1979 to 2016 is presented in the Table \ref{hand-comparison}\\
-\begin{itemize}
-\item \textbf{iHY robot hand}
-	\begin{itemize}
-		\item \textbf{Design:}\\
-	\begin{figure}[h!]
-	\centering
-  \includegraphics[width= 1.0\linewidth]{./images/ihyCS}
-  \caption{Cross-section view of the iHY finger design}
-  \label{fig:ihyCS}
-	\end{figure}
-Researches at Harvard, Yale and iRobot designed the iHY hand for the DARPA ARM challenge. The hand is designed to be flexible, strong and versatile. And can grip objects from pair of scissors to 22 Kg kettlebell.\\
-The iHY finger, Fig.\ref{fig:ihyCS}, was constructed using a casting and over molding process. The internal components of the fingers (circuit boards, sensors, wiring, and cable guides) were inserted into the mold cavity.
-It has a two-link modular design. The links are made of hard plastic and connected by a pliable rubber, they can adapt to almost any shape.\\
-Cables that run along the fingers act as tendons, tensing and relaxing to grip and release.\\
-To grip an objects the fingers bend around them mathcing their shapes. Then the cables tense up and form a tight grip around the object.\\
-The proximal finger joint is mounted on a magnetic base, which serves both as an attachment point and as a high-force breakaway coupling, to avoid damages in case of a damaging collision.\\
-Spring-loaded "pogo pin" electrical coupler makes replacing the finger easier.\\
-The proximal pin joint includes a torsion spring, which provides the proximal joint with some elasticity.\\
-The high elasticity of the fingers is an important feature, especially at the distal flexure. Because the fingers do not have extensor tendons, the joint elasticity alone extends the fingers when the flexor tendons are relaxed. This also serves the purpose of passive adaptation to the shape of the object grasped, which removed the need to detect and react to small variations in surface geometry.\\
-Removable nails are mounted on the fingers, fastened by screws to allow for varying nail lengths. This inexpensive feature on the iHY Hand proved to be useful when grasping small objects or sliding the finger along a surface, which provides a repeatable point of contact and a mean for passively aligning the finger against the surface on which the object is located.\\
-The monolithic structure of the fingers, without seams or fasteners, make the fingers resitant to water, dirt, and impact.\\
-		\item \textbf{Sensors:}\\
-	\begin{figure}[h!]
+Main tactile sensors are presented in the Table \ref{TactilSsensor} \cite{wettels2014multimodal}.\\
+\begin{table}[]
 \centering
-  \includegraphics[width=1.0\linewidth]{./images/ihySensors}
-  \caption{iHY finger sensors}
-  \label{fig:ihySensors}
+\caption{Summary of tactile sensing technologies}
+\label{TactilSsensor}
+\begin{tabular}{p{1.5cm}p{1.5cm}p{1.5cm}}
+\hline
+\textbf{Transduction Method} & \textbf{Advantages} & \textbf{Disadvantages} \\ \hline
+Capacitive & Can be flexible, wide dynamic range, sensitive & Hysteresis, noise, limited resolution \\ \hline
+Inductive & High sensitivity, repeatability & Complex construction, electronics in workspace, low spatial resolution \\ \hline
+Resistive: deformable contact area & Flexible, thin & Hysteresis \\ \hline
+Resistive: conductive fabric & Flexible, robust, simple & Unable to resolve more than one contact point \\ \hline
+Resistive: quantum tunneling composite & Sensitive, wide dynamic range & Hysteresis, gas absorption \\ \hline
+Resistive: strain gauge & Sensitive, wide dynamic range & Bulky, expensive \\ \hline
+Resistive: piezoresistive conductive polymer & Thin, low cost, simple & Hysteresis, stiff \\ \hline
+Resistive: piezo-MEMS & Small, multi-element & Large number of wires in workspace \\ \hline
+Resistive/Capacitive: liquid channels embedded in elastomer & Small, flexible, multidimensional force sensing capability & Large number of wires in workspace \\ \hline
+Polymer-MEMs (multi-modal) & Measures 6-DOF force, heat-flow, temperature, roughness & Large number of wires in workspace, wiring complexity \\ \hline
+Piezoelectric & Detects dynamics for slip and texture & Only detects dynamic events, thermal sensitivity \\ \hline
+Optical: video processing & Very high resolution, sensitive & Computationally intensive, sensitive to ambient light \\ \hline
+Optical: resistive & Flexible, low hysteresis & Complex fabrication \\ \hline
+Magneto-elastic & Very sensitive, low hysteresis & Sensitive to external magnetic fields \\ \hline
+Magneto-resistive & Robust, sensitive, low hysteresis & Noisy \\ \hline
+Ultrasound & Can resolve static and dynamic information & High voltage, complex electronics \\ \hline
+\end{tabular}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\textbf{Materials and Manufacturing}}
+The design and fabrication of a prototype using traditional machinery techniques is a rather long and expensive process, and often the employment of rapid prototyping techniques provides several advantages. One of the main advantages is represented by the chance to develop parts with complex geometry that could not be manufactured using traditional techniques.\\
+Won et al. \cite{won2000fabrication} developed a five-finger anthropomorphic hand by using a Selective Laser Sintering technique (SLS) (Fig.\ref{fig:SelectiveLaserSintering}), which allows joints to be manufactured in one-step without requiring assembly. The main drawback of SLS is the lack of mechanical proprieties (such as stiffness and strength), moreover it fails when dimension tolerances are narrowed.\\
+\begin{figure}[h!]
+\centering  \includegraphics[scale=0.7]{./images/SelectiveLaserSintering}
+  \caption{Selective Laser Sintering (SLS)}
+  \label{fig:SelectiveLaserSintering}
 	\end{figure}
-The iHY Hand's sensor system (Fig.\ref{fig:ihySensors}) consists of tactile arrays that cover the fingers and palm. Flexure deformation sensors in each distal finger joint, magnetic encoders at each proximal finger joint, and acceerometers in the distal finger links.\\
-	\end{itemize}
-\item Shadow EDC Hand
-\item The handroid
-\item DLR hand II
-\item The PISA/IIT soft hand
-\item UW’s Hand
-\item AR10 humanoid hand
-\item H2 compliant hand
-\item Robotiq 3 Finger Gripper
-\item SDM compliant hand
-\item Modular Soft Robotic Gripper
-\item RBO Hand 2
-\item iLimb ultra
-\item Michelangelo hand
-\item IH2 Azzurra
-\end{itemize}
+Dalley et al. \cite{dalley2009design} developed a transradial anthropomorphic hand, in which the parts were physically realized in high-strength, nickel-coated thermoplastic using an additive directly incorporated during the manufacturing process (Fig.\ref{fig:NickelCoated}); this method combines the flexibility of the rapid technique with the strength/stiffness of the metallic material. The main drawbacks of this method are the low fatigue resistance, and poor surface finish and geometrical tolerance that often requires re-machining by traditional methods.\\
+\begin{figure}[h!]
+\centering  \includegraphics[scale=0.7]{./images/NickelCoated}
+  \caption{High-strength, nickel-coated thermoplastic}
+  \label{fig:NickelCoated}
+	\end{figure}
+Dollar and Howe \cite{dollar2010highly} showed how a further integration of sensors, electronics and actuation could be obtained using polymer-based Shape Deposition Manufacturing (SDM) (Fig.\ref{fig:ShapeDepositionManufacturing}). Another advantage of the SDM technique is the possibility of simultaneously creating rigid links and compliant joints of the fingers, providing the hand with passive mechanical compliance useful for grasping in unstructured environments.\\
+\begin{figure}[h!]
+\centering  \includegraphics[scale=0.7]{./images/ShapeDepositionManufacturing}
+  \caption{Polymer-based Shape Deposition Manufacturing (SDM)}
+  \label{fig:ShapeDepositionManufacturing}
+	\end{figure}
+The use of compliant materials in manufacturing of joints allows a number of components to be avoided (such as pulleys, axis, torsion springs, and so on) and the ability to embed the extension system, disguised as releasing springs, in the structure thus resulting in a reduction in joint size. Examples of artificial hands exploiting compliant joints based on these principles were developed at the University of Bologna, Stanford, Genoa, Scuola Superiore Sant’Anna, and University of Iowa.\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\textbf{Conclusion and Future Trends}}
+In this paper robotic fingers were discussed, their design considerations in choosing the suitable configuration, mechanism and sensors was discussed by considering several projects from past decades to the present. The growing use of the hands in human used environments and the emphasis on sensor development and new materials in the past years, hints that sensors and the use of soft and compliant materials will be the major research approaches in robotic fingers \cite{spiers2018variable}.\\
+Another future trend is the development of artificial skins for the fingers with denser spatial resolution and a multitude of sensor modalities, as recent advances in biofabriction techniques could integrate engineered muscle tissues with artificial devices, leading to biohybrid robotics \cite{feinberg2015biological} \cite{morimoto2018biohybrid}.\\
+Also as more and more sensors are being employed in smart-phones, which has a big market, will drive down the costs of these sensors and encourage their use in the artificial hand.\\
+It is also believed that there is a need for standardization as it is seen of great importance not only for commercial purposes but also for classification of the newly developed devices \cite{ramirez20173}.\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{landscape}
 \begin{table}[]
 \centering
