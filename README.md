@@ -20,8 +20,7 @@
 Grasping is achieved in robots by suitable finger mechanisms inspired from structures in nature. This paper discusses anthropomorphic hands, its composing parts and mechanisms, used actuators and sensors, their characteristics and operation.
 
 ## To-do list:
-* Adding details of several chosen robotic hands' fingers mechanisms, used actuators and sensors.
-* Research about trends in robotic finger design.
+
 
 ## Status
 Research is: _in progress_
